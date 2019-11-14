@@ -16,8 +16,13 @@ class ListBaseViewController: UIViewController {
 
         view.backgroundColor = UIColor(red: CGFloat(arc4random()%255)/255, green: CGFloat(arc4random()%255)/255, blue: CGFloat(arc4random()%255)/255, alpha: 1)
     }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
 }
 
+//
 extension ListBaseViewController: JXSegmentedListContainerViewListDelegate {
     func listView() -> UIView {
         return view

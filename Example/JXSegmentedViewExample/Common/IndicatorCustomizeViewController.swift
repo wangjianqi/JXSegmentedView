@@ -42,6 +42,7 @@ class IndicatorCustomizeViewController: UITableViewController {
             vc.segmentedDataSource = dataSource
             //配置指示器
             let indicator = JXSegmentedIndicatorLineView()
+            // 固定宽度
             indicator.indicatorWidth = 20
             vc.segmentedView.indicators = [indicator]
         case "LineView与Cell同宽":
@@ -54,6 +55,7 @@ class IndicatorCustomizeViewController: UITableViewController {
             vc.segmentedDataSource = dataSource
             //配置指示器
             let indicator = JXSegmentedIndicatorLineView()
+            // 一样的宽度
             indicator.indicatorWidth = JXSegmentedViewAutomaticDimension
             vc.segmentedView.indicators = [indicator]
         case "LineView延长style":
