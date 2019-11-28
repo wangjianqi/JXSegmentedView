@@ -48,6 +48,7 @@ class PagingViewController: UIViewController {
         lineView.indicatorWidth = 30
         segmentedView.indicators = [lineView]
 
+        //分割线
         let lineWidth = 1/UIScreen.main.scale
         let lineLayer = CALayer()
         lineLayer.backgroundColor = UIColor.lightGray.cgColor
@@ -69,7 +70,7 @@ class PagingViewController: UIViewController {
 }
 
 extension PagingViewController: JXPagingViewDelegate {
-
+    //headerView的高度
     func tableHeaderViewHeight(in pagingView: JXPagingView) -> Int {
         return JXTableHeaderViewHeight
     }
@@ -78,6 +79,7 @@ extension PagingViewController: JXPagingViewDelegate {
         return userHeaderContainerView
     }
 
+    //固定的Section
     func heightForPinSectionHeader(in pagingView: JXPagingView) -> Int {
         return JXheightForHeaderInSection
     }
@@ -102,7 +104,7 @@ extension PagingViewController: JXPagingViewDelegate {
         list.beginFirstRefresh()
         return list
     }
-
+    //滑动偏移
     func mainTableViewDidScroll(_ scrollView: UIScrollView) {
         userHeaderView?.scrollViewDidScroll(contentOffsetY: scrollView.contentOffset.y)
     }

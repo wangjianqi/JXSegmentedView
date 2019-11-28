@@ -27,10 +27,12 @@ class PagingViewTableHeaderView: UIView {
         label.font = UIFont.systemFont(ofSize: 20)
         label.text = "Monkey·D·路飞"
         label.textColor = UIColor.red
+        //top和right
         label.autoresizingMask = AutoresizingMask(rawValue: AutoresizingMask.flexibleRightMargin.rawValue | AutoresizingMask.flexibleTopMargin.rawValue)
         self.addSubview(label)
     }
 
+    //滑动：背景图拉伸
     func scrollViewDidScroll(contentOffsetY: CGFloat) {
         var frame = imageViewFrame!
         frame.size.height -= contentOffsetY
